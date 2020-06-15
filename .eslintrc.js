@@ -1,3 +1,4 @@
 module.exports = {
-	"extends": "wordpress",
+	extends: "wordpress",
+	es6: true,
 };
