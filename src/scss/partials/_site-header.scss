@@ -6,22 +6,22 @@
 	border-bottom: 1px solid $border-color;
 	position: relative;
 	min-height: 49px;
+
+	& > .wrap {
+    align-items: center;
+		display: flex;
+    justify-content: space-between;
+	}
 }
 
 .title-area {
-	float: left;
-	width: 100%;
+	display: inline-block;
 	max-width: $logo_width;
 	text-align: left;
-	margin: 0 auto;
 
 	h1.site-title,
 	p.site-title {
 		margin: 0;
-		font-size: 24px;
-		line-height: 30px;
-
-		padding: 8px;
 
 		a {
 			color: $base-color;
@@ -42,7 +42,7 @@
 */
 
 	@include media("<=mobile_menu") {
-		float: none;
+		// float: none;
 		text-align: center;
 
 		.site-title a {

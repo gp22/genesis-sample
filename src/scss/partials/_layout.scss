@@ -14,11 +14,11 @@ input[type="search"] {
 --------------------------------------------- */
 
 .wrap {
-    max-width: map-get( $breakpoints, 'desktop' );
-    margin: 0 auto;
+	max-width: map-get( $breakpoints, 'desktop' );
+	margin: 0 auto;
 	padding-left:  ($grid-gap / 2);
 	padding-right: ($grid-gap / 2);
-	@include clearfix;
+	// @include clearfix;
 }
 
 .site-inner {
@@ -81,12 +81,12 @@ input[type="search"] {
 	.content-sidebar {
 
 		.site-main {
-			float: left;
+			// float: left;
 			width: 768px / 1168px * 100%;
 		}
 
 		.sidebar-primary {
-			float: right;
+			// float: right;
 			width: 335px / 1168px * 100%;
 		}
 
@@ -98,13 +98,13 @@ input[type="search"] {
 			}
 
 			.site-main {
-				float: none;
+				// float: none;
 				width: 100%;
 				max-width: $content-width;
 			}
 
 			.sidebar-primary {
-				float: none;
+				// float: none;
 				width: 100%;
 			}
 		}

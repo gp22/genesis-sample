@@ -154,6 +154,9 @@ genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
 
+// Removes site description
+remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
+
 // Repositions primary navigation menu.
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
 add_action( 'genesis_header', 'genesis_do_nav', 12 );
