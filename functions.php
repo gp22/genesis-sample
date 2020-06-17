@@ -13,6 +13,18 @@
 // Starts the engine.
 require_once get_template_directory() . '/lib/init.php';
 
+add_action( 'wp_enqueue_scripts', 'global_enqueues' );
+/**
+ * Global enqueues
+ *
+ * @since 1.0.0
+ */
+function global_enqueues() {
+	// CSS
+	wp_dequeue_style( 'child-theme' );
+	wp_enqueue_style( 'global-style', get_stylesheet_directory_uri() . '/public/css/style.css', array(), filemtime( get_stylesheet_directory() . '/public/css/style.css' ) );
+}
+
 // Sets up the Theme.
 require_once get_stylesheet_directory() . '/lib/theme-defaults.php';
 
