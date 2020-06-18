@@ -30,7 +30,6 @@
 		"recursive-readdir": "^2.2.2",
 		"stylelint": "^9.10.1",
 		"stylelint-config-wordpress": "^13.1.0",
-		"tailwindcss": "^1.4.6",
 		"yargs": "^15.3.1"
 	},
 	"scripts": {

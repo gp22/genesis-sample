@@ -28,12 +28,33 @@ $highlight: brand-color( 'blue' );
 $border-color: $grey_4;
 
 // Fonts
-$serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
-$sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+$font-serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+$font-sans: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 
 // Content
 $content-width: 768px;
 $block-margin: 20px;
+
+// Spacing
+// Based on the tailwindcss default spacing scale
+// https://tailwindcss.com/docs/customizing-spacing#default-spacing-scale
+$s1:  0.25rem;
+$s2:  0.5rem;
+$s3:  0.75rem;
+$s4:  1rem;
+$s5:  1.25rem;
+$s6:  1.5rem;
+$s7:  2rem;
+$s8:  2.5rem;
+$s9:  3rem;
+$s10: 4rem;
+$s11: 5rem;
+$s12: 6rem;
+$s13: 8rem;
+$s14: 10rem;
+$s15: 12rem;
+$s16: 14rem;
+$s17: 16rem;
 
 // Grid
 $grid: grid;
@@ -50,17 +71,16 @@ $menu_width: $logo_width + $grid-gap;
 $persistant_mobile: false; // 49px
 $persistent_desktop: false; // 49px
 
-
 // Include Media
 $breakpoints: (
-  'phone'  : 360px,
-  'small'  : 768px,
-  'tablet' : 768px, // required for include-media
-  'mobile_menu' : 768px,
-  'medium' : 992px,
-  'large'  : 1200px,
-  'desktop': $grid-width + $grid-gap, // required for include-media
-  'content-width': $content-width + $grid-gap,
+  'phone'         : 360px,
+  'small'         : 768px,
+  'tablet'        : 768px, // required for include-media
+  'mobile_menu'   : 768px,
+  'medium'        : 992px,
+  'large'         : 1200px,
+  'desktop'       : $grid-width + $grid-gap, // required for include-media
+  'content-width' : $content-width + $grid-gap,
 );
 
 @import "../modules/helpers";

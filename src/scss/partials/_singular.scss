@@ -248,8 +248,8 @@
 			display: inline-block;
 			vertical-align: middle;
 			margin: 0;
-			font-family: $serif;
-			@include font-sizes( 18px, 22px );
+			font-family: $font-serif;
+			// @include font-sizes( 18px, 22px );
 
 			a {
 				color: $base-color;

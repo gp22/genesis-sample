@@ -1,13 +1,14 @@
 @mixin base-style {
 	color: $base-color;
-	font-family: $sans-serif;
-	@include font-sizes( 18px, 20px );
+	font-family: $font-sans;
+	font-size: 100%;
+	// @include font-sizes( 18px, 20px );
 	font-weight: 400;
-	line-height: 1.55;
+	// line-height: 1.55;
 
-	@media print {
-		font-family: sans-serif;
-	}
+	// @media print {
+	// 	font-family: sans-serif;
+	// }
 }
 
 %transition {
