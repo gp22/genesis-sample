@@ -28,8 +28,24 @@ $highlight: brand-color( 'blue' );
 $border-color: $grey_4;
 
 // Fonts
-$font-serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
-$font-sans: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+$font-sans:    "Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+$font-serif:   Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+$font-display: 'Oswald', $font-sans;
+$font-mono:    Monaco, Menlo, Consolas, "Courier New", monospace;
+$font-base:    18px;
+
+// Type Scale
+$text-tiny: 0.555rem;
+$text-xs: 	0.702rem;
+$text-sm: 	0.889rem;
+$text-base: 1rem;
+$text-lg: 	1.125rem;
+$text-xl: 	1.266rem;
+$text-2xl: 	1.424rem;
+$text-3xl: 	1.602rem;
+$text-4xl: 	1.802rem;
+$text-5xl: 	2.027rem;
+$text-6xl: 	2.281rem;
 
 // Content
 $content-width: 768px;
@@ -66,7 +82,8 @@ $margin_2x: $base-margin * 2;
 $margin_4x: $base-margin * 4;
 
 // Site Header
-$logo_width: 300px;
+$logo_height: 42px;
+$logo_width: 241px;
 $menu_width: $logo_width + $grid-gap;
 $persistant_mobile: false; // 49px
 $persistent_desktop: false; // 49px

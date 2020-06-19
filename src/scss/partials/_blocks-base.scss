@@ -1,7 +1,7 @@
 /* Typographical Elements
 --------------------------------------------- */
 html {
-	font-size: 16px;
+	@include font-sizes( $font-base );
 }
 
 body {
@@ -34,7 +34,7 @@ ul {
 
 code,
 pre {
-	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+	font-family: $font-mono;
 	font-size: 12px;
 }
 
@@ -67,9 +67,9 @@ cite {
 	font-style: normal;
 }
 
-.clearfix {
-	@include clearfix;
-}
+// .clearfix {
+// 	@include clearfix;
+// }
 
 /* Paragraph
 --------------------------------------------- */
@@ -103,9 +103,9 @@ h4,
 h5,
 h6 {
 	color: $grey_10;
-	font-family: $font-sans;
-	font-weight: 400;
-	// line-height: 1.2;
+	font-family: $font-display;
+	font-weight: 700;
+	line-height: 1.2;
 	// margin: 0 0 16px;
 
 	a {
@@ -122,18 +122,18 @@ h6 {
 	}
 }
 
-// h1 {
-//     @include font-sizes( 34px, 42px, 46px );
-// }
+h1 {
+    @include font-sizes( $text-2xl, $text-2xl, $text-5xl, $text-6xl );
+}
 
 // h2 {
 //     @include font-sizes( 26px, 32px, 36px );
 // }
 
-// h3 {
-//     @include font-sizes( 22px, 26px, 28px );
-// }
+h3 {
+    @include font-sizes( $text-2xl );
+}
 
-// h4, h5, h6 {
-//     @include font-sizes( 18px, 22px );
-// }
+h4, h5, h6 {
+    @include font-sizes( null, $text-xl );
+}
