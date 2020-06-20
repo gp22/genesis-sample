@@ -5,12 +5,6 @@
 	background: $white;
 	border-bottom: 1px solid $border-color;
 	position: relative;
-
-	& > .wrap {
-		align-items: center;
-		display: flex;
-		justify-content: space-between;
-	}
 }
 
 .title-area {

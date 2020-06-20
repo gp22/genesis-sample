@@ -1,11 +1,17 @@
 /* Navigation
 ---------------------------------------------------------------------------------------------------- */
 .genesis-responsive-menu {
+	display: none;
+	width: 100%;
 
 	.wrap {
 		padding: 0;
 	}
 
+	@include media(">mobile_menu") {
+		display: block;
+		width: auto;
+	}
 }
 
 .genesis-nav-menu {
@@ -13,13 +19,6 @@
 	& > * {
 		line-height: 0;
 	}
-
-	// ul {
-	// 	clear: both;
-	// 	line-height: 1;
-	// 	margin: 0;
-	// 	width: 100%;
-	// }
 
 	.menu-item {
 		display: inline-block;
@@ -59,93 +58,89 @@
 		}
 	}
 
-	.nav-secondary {
-		.menu-item.search {
-			@include media("<=mobile_menu") {
-				padding: 4px 16px 16px;
-			}
-			@include media(">mobile_menu") {
-				margin: 5px 0 0 8px;
+	// .nav-secondary {
+	// 	.menu-item.search {
+	// 		@include media("<=mobile_menu") {
+	// 			padding: 4px 16px 16px;
+	// 		}
+	// 		@include media(">mobile_menu") {
+	// 			margin: 5px 0 0 8px;
 
-				.search-field {
-					padding-top: 8px;
-					padding-bottom: 8px;
-					width: 268px;
-				}
-			}
-		}
-	}
+	// 			.search-field {
+	// 				padding-top: 8px;
+	// 				padding-bottom: 8px;
+	// 				width: 268px;
+	// 			}
+	// 		}
+	// 	}
+	// }
 
-	.nav-primary {
+	// .nav-primary {
 
-		.menu-item.search {
-			line-height: 0;
+	// 	.menu-item.search {
+	// 		line-height: 0;
 
-			button {
-				padding: 12px;
-			}
+	// 		button {
+	// 			padding: 12px;
+	// 		}
 
-			@include media("<=mobile_menu") {
-				display: none;
-			}
-		}
-	}
+	// 		@include media("<=mobile_menu") {
+	// 			display: none;
+	// 		}
+	// 	}
+	// }
 
-	@include media(">mobile_menu") {
+	// @include media(">mobile_menu") {
 		// float: right;
 		// width: calc( 100% - #{$menu-width} );
 		// display: flex;
 		// flex-flow: column-reverse nowrap;
 
-		.nav-primary,
-		.nav-secondary {
-			display: flex;
-			justify-content: flex-end;
-		}
+		// .nav-primary,
+		// .nav-secondary {
+		// 	display: flex;
+		// 	justify-content: flex-end;
+		// }
 
-		.nav-primary + .nav-secondary {
-			margin-bottom: 16px;
-		}
+		// .nav-primary + .nav-secondary {
+		// 	margin-bottom: 16px;
+		// }
 
 
-		.menu {
-			display: inline-block;
-			width: auto;
-		}
+		// .menu {
+		// 	display: inline-block;
+		// 	width: auto;
+		// }
 
-		.menu-item {
-			// float: left;
+		// .menu-item {
+		// 	&:hover {
 
-			&:hover {
+		// 		& > .sub-menu {
+		// 			left: auto;
+		// 			opacity: 1;
+		// 		}
+		// 	}
+		// }
 
-				& > .sub-menu {
-					left: auto;
-					opacity: 1;
-				}
-			}
-		}
+		// .sub-menu {
+		// 	background: $grey-2;
+		// 	left: -9999px;
+		// 	opacity: 0;
+		// 	position: absolute;
+		// 	width: 215px;
+		// 	z-index: 99;
 
-		.sub-menu {
-			background: $grey-2;
-			left: -9999px;
-			opacity: 0;
-			position: absolute;
-			width: 215px;
-			z-index: 99;
+		// 	.menu-item {
+		// 		&:hover > a {
+		// 			background: $grey-3;
+		// 		}
+		// 	}
 
-			.menu-item {
-				// float: none;
-
-				&:hover > a {
-					background: $grey-3;
-				}
-			}
-
-			.sub-menu {
-				margin: -48px 0 0 215px;
-			}
-		}
-	}
+		// 	.sub-menu {
+		// 		margin: -48px 0 0 215px;
+		// 	}
+		// }
+	// }
 
 	@include media("<=mobile_menu") {
 		// display: none;
@@ -158,9 +153,9 @@
 			max-width: calc( 100% + 96px );
 		}
 
-		.menu > .menu-item > a {
-			padding: 11px 18px;
-		}
+		// .menu > .menu-item > a {
+		// 	padding: 11px 18px;
+		// }
 
 		.submenu-expand {
 			top: 0;
@@ -222,31 +217,36 @@
 	}
 }
 
-.site-header .wrap {
-	// @include media("<=mobile_menu") {
-	// 	padding: 0 48px;
-	// }
+.site-header {
+	& > .wrap {
 
-	& > .menu-toggle,
-	& > .search-toggle {
-		display: none;
-		// position: absolute;
-		// top: 0;
-		// width: 48px;
-		// height: 48px;
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 
-		// @include media(">mobile_menu") {
-		// 	display: none;
+		& > .menu-toggle,
+		& > .search-toggle {
+			// display: none;
+			// position: absolute;
+			// top: 0;
+			// width: 48px;
+			// height: 48px;
+			padding: $size-5 0;
+
+			@include media(">mobile_menu") {
+				display: none;
+			}
+		}
+
+		// & > .menu-toggle {
+		// 	left: 0;
+		// }
+
+		// & > .search-toggle {
+		// 	right: 0;
 		// }
 	}
-
-	// & > .menu-toggle {
-	// 	left: 0;
-	// }
-
-	// & > .search-toggle {
-	// 	right: 0;
-	// }
 }
 
 /* Header Search
