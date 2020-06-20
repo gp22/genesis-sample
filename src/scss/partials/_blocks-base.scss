@@ -102,14 +102,14 @@ h3,
 h4,
 h5,
 h6 {
-	color: $grey_10;
+	color: $grey-10;
 	font-family: $font-display;
 	font-weight: 700;
 	line-height: 1.2;
 	// margin: 0 0 16px;
 
 	a {
-		color: $grey_10;
+		color: $grey-10;
 
 		&:hover {
 			color: $highlight;
@@ -123,17 +123,17 @@ h6 {
 }
 
 h1 {
-    @include font-sizes( $text-2xl, $text-2xl, $text-5xl, $text-6xl );
+	@include font-sizes( $text-2xl, $text-2xl, $text-5xl, $text-6xl );
 }
 
-// h2 {
-//     @include font-sizes( 26px, 32px, 36px );
-// }
+//h2 {
+//	@include font-sizes( 26px, 32px, 36px );
+//}
 
 h3 {
-    @include font-sizes( $text-2xl );
+	@include font-sizes( $text-2xl );
 }
 
 h4, h5, h6 {
-    @include font-sizes( null, $text-xl );
+	@include font-sizes( null, $text-xl );
 }

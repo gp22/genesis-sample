@@ -220,11 +220,11 @@
 .entry-comments {
 
 	.comment-list {
-		margin: 0 0 $margin_2x;
+		margin: 0 0 $margin-2x;
 
 		li {
 			list-style-type: none;
-			border: 1px solid $grey_3;
+			border: 1px solid $grey-3;
 
 			article {
 				padding: $base-margin;
@@ -271,11 +271,11 @@
 
 		.comment-meta {
 			font-size: 14px;
-			color: $grey_6;
+			color: $grey-6;
 			vertical-align: middle;
 
 			a {
-				color: $grey_6;
+				color: $grey-6;
 				font-weight: 400;
 				text-decoration: none;
 

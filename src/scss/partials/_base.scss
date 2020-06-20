@@ -1,21 +1,21 @@
 // Colors
 $white: #fff;
-$grey_1: #FAFAFA;
-$grey_2: #F5F5F5;
-$grey_3: #EEEEEE;
-$grey_4: #E0E0E0;
-$grey_5: #BDBDBD;
-$grey_6: #9E9E9E;
-$grey_7: #757575;
-$grey_8: #616161;
-$grey_9: #424242;
-$grey_10: #212121;
+$grey-1: #FAFAFA;
+$grey-2: #F5F5F5;
+$grey-3: #EEEEEE;
+$grey-4: #E0E0E0;
+$grey-5: #BDBDBD;
+$grey-6: #9E9E9E;
+$grey-7: #757575;
+$grey-8: #616161;
+$grey-9: #424242;
+$grey-10: #212121;
 $black: #000;
 
 // Brand Colors
 $brand_colors: (
-	'blue'	: #05306F,
-	'grey'	: $grey_1,
+	"blue"	: #05306F,
+	"grey"	: $grey-1,
 );
 @import "../modules/brand-color";
 
@@ -23,14 +23,14 @@ $facebook: #3B5998;
 $twitter: #00B6F1;
 $pinterest: #CB2027;
 
-$base-color: $grey_9;
-$highlight: brand-color( 'blue' );
-$border-color: $grey_4;
+$base-color: $grey-9;
+$highlight: brand-color( "blue" );
+$border-color: $grey-4;
 
 // Fonts
 $font-sans:    "Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 $font-serif:   Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
-$font-display: 'Oswald', $font-sans;
+$font-display: "Oswald", $font-sans;
 $font-mono:    Monaco, Menlo, Consolas, "Courier New", monospace;
 $font-base:    18px;
 
@@ -54,50 +54,50 @@ $block-margin: 20px;
 // Spacing
 // Based on the tailwindcss default spacing scale
 // https://tailwindcss.com/docs/customizing-spacing#default-spacing-scale
-$s1:  0.25rem;
-$s2:  0.5rem;
-$s3:  0.75rem;
-$s4:  1rem;
-$s5:  1.25rem;
-$s6:  1.5rem;
-$s7:  2rem;
-$s8:  2.5rem;
-$s9:  3rem;
-$s10: 4rem;
-$s11: 5rem;
-$s12: 6rem;
-$s13: 8rem;
-$s14: 10rem;
-$s15: 12rem;
-$s16: 14rem;
-$s17: 16rem;
+$size-1:  0.25rem;
+$size-2:  0.5rem;
+$size-3:  0.75rem;
+$size-4:  1rem;
+$size-5:  1.25rem;
+$size-6:  1.5rem;
+$size-7:  2rem;
+$size-8:  2.5rem;
+$size-9:  3rem;
+$size-10: 4rem;
+$size-11: 5rem;
+$size-12: 6rem;
+$size-13: 8rem;
+$size-14: 10rem;
+$size-15: 12rem;
+$size-16: 14rem;
+$size-17: 16rem;
 
 // Grid
 $grid: grid;
 $grid-width: 1168px;
 $grid-gap: 32px;
 $base-margin: 16px;
-$wrap_edge: $base-margin;
-$margin_2x: $base-margin * 2;
-$margin_4x: $base-margin * 4;
+$wrap-edge: $base-margin;
+$margin-2x: $base-margin * 2;
+$margin-4x: $base-margin * 4;
 
 // Site Header
 $logo_height: 42px;
 $logo_width: 241px;
 $menu_width: $logo_width + $grid-gap;
-$persistant_mobile: false; // 49px
-$persistent_desktop: false; // 49px
+$persistent-mobile: false; // 49px
+$persistent-desktop: false; // 49px
 
 // Include Media
 $breakpoints: (
-  'phone'         : 360px,
-  'small'         : 768px,
-  'tablet'        : 768px, // required for include-media
-  'mobile_menu'   : 768px,
-  'medium'        : 992px,
-  'large'         : 1200px,
-  'desktop'       : $grid-width + $grid-gap, // required for include-media
-  'content-width' : $content-width + $grid-gap,
+	"phone"         : 360px,
+	"small"         : 768px,
+	"tablet"        : 768px, // required for include-media
+	"mobile_menu"   : 768px,
+	"medium"        : 992px,
+	"large"         : 1200px,
+	"desktop"       : $grid-width + $grid-gap, // required for include-media
+	"content-width" : $content-width + $grid-gap,
 );
 
 @import "../modules/helpers";
