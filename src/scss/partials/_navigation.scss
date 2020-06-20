@@ -93,7 +93,7 @@
 
 	@include media(">mobile_menu") {
 		// float: right;
-		// width: calc( 100% - #{$menu_width} );
+		// width: calc( 100% - #{$menu-width} );
 		// display: flex;
 		// flex-flow: column-reverse nowrap;
 

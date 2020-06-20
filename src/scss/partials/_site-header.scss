@@ -15,7 +15,7 @@
 
 .title-area {
 	display: inline-block;
-	width: $logo_width;
+	width: $logo-width;
 	text-align: left;
 
 	h1.site-title,
@@ -36,7 +36,7 @@
 		display: block;
 		text-indent: -9999em;
 		width: 100%;
-		height: $logo_height;
+		height: $logo-height;
 	}
 
 	// @include media("<=mobile_menu") {

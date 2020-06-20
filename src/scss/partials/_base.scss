@@ -82,9 +82,9 @@ $margin-2x: $base-margin * 2;
 $margin-4x: $base-margin * 4;
 
 // Site Header
-$logo_height: 42px;
-$logo_width: 241px;
-$menu_width: $logo_width + $grid-gap;
+$logo-height: 42px;
+$logo-width: 241px;
+$menu-width: $logo-width + $grid-gap;
 $persistent-mobile: false; // 49px
 $persistent-desktop: false; // 49px
 
