@@ -177,7 +177,7 @@ img {
 		padding: 60px 16px;
 	}
 
-	@include media(">=medium") {
+	@include media(">=desktop") {
 		padding: 70px 16px;
 	}
 

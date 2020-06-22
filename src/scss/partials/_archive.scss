@@ -8,11 +8,11 @@
 			margin-bottom: 48px;
 		}
 
-		@include media(">small", "<medium") {
+		@include media(">small", "<desktop") {
 			@include columns(2);
 		}
 
-		@include media(">=medium") {
+		@include media(">=desktop") {
 			@include columns(4);
 		}
 	}

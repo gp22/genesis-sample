@@ -48,7 +48,7 @@ $text-5xl: 	2.027rem;
 $text-6xl: 	2.281rem;
 
 // Content
-$content-width: 768px;
+$content-width: 600px;
 $block-margin: 20px;
 
 // Spacing
@@ -74,9 +74,9 @@ $size-17: 16rem;
 
 // Grid
 $grid: grid;
-$grid-width: 1168px;
-$grid-gap: 32px;
-$base-margin: 16px;
+$grid-width: 800px;
+$grid-gap: $font-base;
+$base-margin: $font-base;
 $wrap-edge: $base-margin;
 $margin-2x: $base-margin * 2;
 $margin-4x: $base-margin * 4;
@@ -90,12 +90,12 @@ $persistent-desktop: false; // 49px
 
 // Include Media
 $breakpoints: (
-	"phone"         : 360px,
-	"small"         : 768px,
-	"tablet"        : 768px, // required for include-media
-	"mobile_menu"   : 768px,
+	// "phone"         : 360px,
+	"small"         : $content-width,
+	"tablet"        : $content-width, // required for include-media
+	"mobile_menu"   : $content-width,
 	"medium"        : 992px,
-	"large"         : 1200px,
+	// "large"         : 1200px,
 	"desktop"       : $grid-width + $grid-gap, // required for include-media
 	"content-width" : $content-width + $grid-gap,
 );

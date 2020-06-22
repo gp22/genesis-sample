@@ -36,16 +36,17 @@ input[type="search"] {
 .wrap {
 	max-width: map-get( $breakpoints, 'desktop' );
 	margin: 0 auto;
-	padding-left:  ($grid-gap / 2);
-	padding-right: ($grid-gap / 2);
-	// @include clearfix;
+	// padding-left:  ($grid-gap / 2);
+	// padding-right: ($grid-gap / 2);
+	padding-left:  ($grid-gap);
+	padding-right: ($grid-gap);
 }
 
 .site-inner {
-	padding: 36px 0;
-	@include media(">=tablet") {
-		padding: 48px 0;
-	}
+	// padding: 36px 0;
+	// @include media(">=tablet") {
+		// padding: 48px 0;
+	// }
 
 	.singular.content & > .wrap {
 		max-width: map-get( $breakpoints, 'content-width' );
@@ -89,14 +90,14 @@ input[type="search"] {
 /* Sidebar Layouts
 --------------------------------------------- */
 
-@include media("<medium") {
+@include media("<desktop") {
 
 	.sidebar-primary {
 		display: none;
 	}
 }
 
-@include media(">=medium") {
+@include media(">=desktop") {
 
 	.content-sidebar {
 
