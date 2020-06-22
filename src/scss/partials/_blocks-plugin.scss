@@ -2,9 +2,17 @@
 --------------------------------------------- */
 
 div.wpforms-container {
+  background: brand-color( 'blue', 'lighten' );
+	margin: 0;
+
+	.wpforms-form {
+    max-width: map-get( $breakpoints, 'desktop' );
+    margin: 0 auto;
+    padding-left:  ($grid-gap);
+    padding-right: ($grid-gap);
+	}
 
 	.wpforms-title {
-	    @include font-sizes( 24px, 32px );
 		font-weight: 700;
 		line-height: 1.2;
 		margin: 0 0 16px;
@@ -22,8 +30,8 @@ div.wpforms-container {
 	}
 
 	.wpforms-field-label {
-		font-size: 16px;
-	}
+    color: $white;
+  }
 
 	.wpforms-recaptcha-container {
 		padding: 0;
@@ -33,35 +41,33 @@ div.wpforms-container {
 		}
 	}
 
-	.wpforms-submit-container {
-		padding: 0;
-		margin-top: 32px;
-		text-align: right;
+	.wpforms-field-container {
+		display: flex;
+		flex-wrap: wrap;
 	}
 
-	&.one-line {
-		@include clearfix;
+	.wpforms-field {
+		width: 100%;
+	}
 
-			@include media(">=tablet") {
+	.wpforms-field-medium {
+		max-width: none;
+	}
 
-			.wpforms-field-container {
-				display: table;
-				width: calc(100% - 110px);
-				float: left;
+	.wpforms-submit-container {
+		text-align: left;
+		margin: 0;
+	}
 
-				.wpforms-field {
-					display: table-cell;
-					padding-right: 16px;
-					margin: 0;
-				}
-			}
+	@include media(">tablet") {
+		.wpforms-field-name {
+			padding-right: $size-2;
+			width: 50%;
+		}
 
-			.wpforms-submit-container {
-				float: right;
-				width: 110px;
-				clear: none;
-				margin: 0;
-			}
+		.wpforms-field-email {
+			padding-left: $size-2;
+			width: 50%;
 		}
 	}
 }
