@@ -37,8 +37,17 @@ add_action( 'wp_enqueue_scripts', 'pg_child_theme_setup' );
  */
 function pg_child_theme_setup() {
 
+	// Repositions primary navigation menu.
+	remove_action( 'genesis_after_header', 'genesis_do_nav' );
+	add_action( 'genesis_header', 'genesis_do_nav', 12 );
+
+	// Repositions the secondary navigation menu.
+	remove_action( 'genesis_after_header', 'genesis_do_subnav' );
+	add_action( 'genesis_footer', 'genesis_do_subnav', 10 );
+
 	// Theme
 	include_once( get_stylesheet_directory() . '/inc/site-footer.php' );
+	include_once( get_stylesheet_directory() . '/inc/hero.php' );
 
 }
 
@@ -176,14 +185,6 @@ genesis_unregister_layout( 'sidebar-sidebar-content' );
 
 // Removes site description
 remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
-
-// Repositions primary navigation menu.
-remove_action( 'genesis_after_header', 'genesis_do_nav' );
-add_action( 'genesis_header', 'genesis_do_nav', 12 );
-
-// Repositions the secondary navigation menu.
-remove_action( 'genesis_after_header', 'genesis_do_subnav' );
-add_action( 'genesis_footer', 'genesis_do_subnav', 10 );
 
 add_filter( 'wp_nav_menu_args', 'genesis_sample_secondary_menu_args' );
 /**
