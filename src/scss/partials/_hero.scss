@@ -1,0 +1,13 @@
+.hero {
+  background: brand-color( 'blue', 'lighten' );
+  margin-bottom: $size-10;
+
+  & .hero-inner {
+    padding-bottom: $size-6;
+    padding-top: $size-6;
+  }
+
+  & h1, h2 {
+    color: $white;
+  }
+}
