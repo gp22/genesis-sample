@@ -171,24 +171,21 @@ img {
 --------------------------------------------- */
 
 .wp-block-group {
-	padding: 40px 16px;
 
-	@include media(">=tablet") {
-		padding: 60px 16px;
-	}
+	&.wpforms {
+		background: brand-color( 'blue', 'lighten' );
+		color: $white;
+		margin: 0;
+		padding: $size-8 0;
 
-	@include media(">=desktop") {
-		padding: 70px 16px;
+		@include media(">tablet") {
+			padding-top: $size-12;
+			padding-bottom: $size-12;
+		}
 	}
 
 	.wp-block-group__inner-container {
-		max-width: $content_width;
 		margin: 0 auto;
-		@include clearfix;
-
-		& > *:last-child {
-			margin-bottom: 0;
-		}
 	}
 
 	// Dark background

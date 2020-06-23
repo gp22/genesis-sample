@@ -94,7 +94,7 @@ $breakpoints: (
 	"small"         : $content-width,
 	"tablet"        : $content-width, // required for include-media
 	"mobile_menu"   : $content-width,
-	"medium"        : 992px,
+	"medium"        : $content-width,
 	// "large"         : 1200px,
 	"desktop"       : $grid-width + $grid-gap, // required for include-media
 	"content-width" : $content-width + $grid-gap,
