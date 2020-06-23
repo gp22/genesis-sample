@@ -7,7 +7,7 @@
 
 .wpforms-description {
 	margin: 0 auto $size-8;
-	max-width: $grid-width;
+	max-width: map-get( $breakpoints, 'desktop' );
 	padding: 0 $grid-gap;
 }
 
@@ -172,6 +172,25 @@ div.wpforms-container {
 
 		.shared-counts-count {
 			display: none;
+		}
+	}
+}
+
+/* Atomic Blocks
+--------------------------------------------- */
+
+.wp-block-group.block-features {
+
+	.ab-layout-columns-2 {
+
+		& >.ab-layout-column-wrap {
+			grid-template-columns: 1fr;
+			grid-template-areas: "col1" "col2";
+
+			@include media(">desktop") {
+				grid-template-columns: 1fr 1fr;
+				grid-template-areas: "col1 col2";
+			}
 		}
 	}
 }
