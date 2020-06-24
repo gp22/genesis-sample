@@ -56,30 +56,31 @@ $default: nth( nth( $brand_colors, 1 ), 1 ); // first color in $brand_colors arr
 blockquote,
 blockquote.wp-block-quote {
 	// background: transparent url(../icons/utility/quote.svg) no-repeat top left;
-	background-size: 36px auto;
-	padding-top: 36px + 11px;
-	text-align: left;
+	// background-size: 36px auto;
+	// padding-top: 36px + 11px;
+	// text-align: left;
+	margin: 0;
 
 	p {
-		color: $base-color;
-		font-size: 24px;
-		font-style: normal;
-		font-weight: 400;
+		// color: $base-color;
+		// font-size: 24px;
+		// font-style: normal;
+		// font-weight: 400;
 	}
 
 	cite,
 	.wp-block-quote__citation {
-		color: $base-color;
-		display: block;
-		font-size: 16px;
-		font-weight: 700;
-		margin-top: 12px;
-		opacity: .5;
-		text-transform: uppercase;
+		// color: $base-color;
+		// display: block;
+		// font-size: 16px;
+		// font-weight: 700;
+		// margin-top: 12px;
+		// opacity: .5;
+		// text-transform: uppercase;
 	}
 
     p:last-of-type {
-        margin-bottom: 0;
+        // margin-bottom: 0;
     }
 
 }
@@ -172,16 +173,12 @@ img {
 
 .wp-block-group {
 
-	&.wpforms {
-		background: brand-color( 'blue', 'lighten' );
-		color: $white;
-		margin: 0;
-		padding: $size-8 0;
+	&.main-content {
 
-		@include media(">tablet") {
-			padding-top: $size-12;
-			padding-bottom: $size-12;
+		& p {
+			max-width: $content-width;
 		}
+
 	}
 
 	.wp-block-group__inner-container {
