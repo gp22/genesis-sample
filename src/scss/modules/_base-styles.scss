@@ -6,6 +6,48 @@
 	line-height: $line-height-body;
 }
 
+/**
+ * Heading Mixins inspired by the article at:
+ * https://responsivedesign.is/articles/helpful-sass-mixins/
+ *
+**/
+@mixin heading {
+	color: inherit;
+	font-family: $font-display;
+	font-weight: 700;
+	margin: 0 0 $base-margin;
+}
+
+@mixin heading-1 {
+	font-size: $text-6xl;
+	line-height: $line-height-heading-6xl;
+}
+
+@mixin heading-2 {
+	font-size: $text-5xl;
+	line-height: $line-height-heading-5xl;
+}
+
+@mixin heading-3 {
+	font-size: $text-4xl;
+	line-height: $line-height-heading-4xl;
+}
+
+@mixin heading-4 {
+	font-size: $text-3xl;
+	line-height: $line-height-heading-3xl;
+}
+
+@mixin heading-5 {
+	font-size: $text-2xl;
+	line-height: $line-height-heading-2xl;
+}
+
+@mixin heading-6 {
+	font-size: $text-xl;
+	line-height: $line-height-heading-xl;
+}
+
 %transition {
 	transition: all 0.1s ease-in-out;
 }

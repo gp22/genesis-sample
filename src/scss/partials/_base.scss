@@ -34,7 +34,12 @@ $font-display: "Oswald", $font-sans;
 $font-mono:    Monaco, Menlo, Consolas, "Courier New", monospace;
 $font-base:    16px;
 $line-height-body: 1.65;
-$line-height-heading: 1.2;
+$line-height-heading-xl: $line-height-body;
+$line-height-heading-2xl: 1.55;
+$line-height-heading-3xl: 1.55;
+$line-height-heading-4xl: 1.45;
+$line-height-heading-5xl: 1.45;
+$line-height-heading-6xl: 1.3;
 
 // Type Scale
 $text-tiny: 0.555rem;
@@ -98,12 +103,11 @@ $rounded-full: 9999px;
 
 // Include Media
 $breakpoints: (
-	// "phone"         : 360px,
+	"phone"         : 360px,
 	"small"         : 600px,
 	"tablet"        : 600px, // required for include-media
 	"mobile_menu"   : 600px,
 	"medium"        : 600px,
-	// "large"         : 1200px,
 	"desktop"       : $grid-width + $grid-gap, // required for include-media
 	"content-width" : calc( $content-width + $grid-gap ),
 );
