@@ -9,7 +9,7 @@
 
 .title-area {
 	display: inline-block;
-	width: $logo-width;
+	width: $size-15;
 	text-align: left;
 
 	h1.site-title,
@@ -33,17 +33,9 @@
 		height: $logo-height;
 	}
 
-	// @include media("<=mobile_menu") {
-	// 	// float: none;
-	// 	text-align: center;
-
-	// 	.site-title a {
-	// 		padding-bottom: 0;
-	// 		height: 48px;
-	// 		background-size: auto 42px;
-	// 	}
-	// }
-
+	@include media(">=tablet") {
+		width: $logo-width;
+	}
 }
 
 
