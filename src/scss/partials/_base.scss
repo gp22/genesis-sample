@@ -32,7 +32,9 @@ $font-sans:    "Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Ox
 $font-serif:   Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 $font-display: "Oswald", $font-sans;
 $font-mono:    Monaco, Menlo, Consolas, "Courier New", monospace;
-$font-base:    18px;
+$font-base:    16px;
+$line-height-body: 1.65;
+$line-height-heading: 1.2;
 
 // Type Scale
 $text-tiny: 0.555rem;
@@ -48,7 +50,7 @@ $text-5xl: 	2.027rem;
 $text-6xl: 	2.281rem;
 
 // Content
-$content-width: 600px;
+$content-width: 32rem;
 $block-margin: 20px;
 
 // Spacing
@@ -76,7 +78,7 @@ $size-17: 16rem;
 $grid: grid;
 $grid-width: 800px;
 $grid-gap: $font-base;
-$base-margin: $font-base;
+$base-margin: $text-base;
 $wrap-edge: $base-margin;
 $margin-2x: $base-margin * 2;
 $margin-4x: $base-margin * 4;
@@ -88,16 +90,22 @@ $menu-width: $logo-width + $grid-gap;
 $persistent-mobile: false; // 49px
 $persistent-desktop: false; // 49px
 
+// Shadows
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+// Border Radius
+$rounded-full: 9999px;
+
 // Include Media
 $breakpoints: (
 	// "phone"         : 360px,
-	"small"         : $content-width,
-	"tablet"        : $content-width, // required for include-media
-	"mobile_menu"   : $content-width,
-	"medium"        : $content-width,
+	"small"         : 600px,
+	"tablet"        : 600px, // required for include-media
+	"mobile_menu"   : 600px,
+	"medium"        : 600px,
 	// "large"         : 1200px,
 	"desktop"       : $grid-width + $grid-gap, // required for include-media
-	"content-width" : $content-width + $grid-gap,
+	"content-width" : calc( $content-width + $grid-gap ),
 );
 
 @import "../modules/helpers";

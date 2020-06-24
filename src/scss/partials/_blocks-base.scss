@@ -1,7 +1,7 @@
 /* Typographical Elements
 --------------------------------------------- */
 html {
-	@include font-sizes( $font-base );
+	@include font-sizes( $font-base, $text-lg );
 }
 
 body {
@@ -102,10 +102,10 @@ h3,
 h4,
 h5,
 h6 {
-	color: $grey-10;
+	// color: $grey-10;
 	font-family: $font-display;
 	font-weight: 700;
-	line-height: 1.2;
+	line-height: $line-height-heading;
 	margin: 0 0 $base-margin;
 
 	a {
@@ -123,7 +123,7 @@ h6 {
 }
 
 h1, .h1 {
-	@include font-sizes( $text-2xl, $text-2xl, $text-5xl, $text-6xl );
+	@include font-sizes( $text-3xl, $text-3xl, $text-5xl, $text-6xl );
 }
 
 //h2 {

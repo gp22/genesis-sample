@@ -1,13 +1,57 @@
 .hero {
   background: brand-color( 'blue', 'lighten' );
+  color: $white;
   margin-bottom: $size-10;
+  position: relative;
 
   & .hero-inner {
-    padding-bottom: $size-6;
-    padding-top: $size-6;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: $size-12;
+    padding-top: $size-10;
+
+    & .hero-heading-container {
+      max-width: $content-width;
+    }
+
+    & .hero-subhead {
+      color: rgba( $white, .75 );
+      font-family: $font-sans;
+      font-size: inherit;
+      font-weight: 400;
+      line-height: $line-height-body;
+      margin-bottom: $size-8;
+    }
+
+    & .hero-img {
+      border-radius: $rounded-full;
+      box-shadow: $shadow-lg;
+      height: 120px;
+      width: 120px;
+    }
   }
 
-  & h1, h2 {
-    color: $white;
+  & svg {
+    position: absolute;
+    bottom: 0;
+  }
+
+  @include media(">=tablet") {
+
+    & .hero-inner {
+      flex-direction: row;
+      padding-bottom: $size-13;
+      padding-top: $size-12;
+
+      & .hero-heading-container {
+        margin-right: $size-8;
+      }
+
+      & .hero-subhead {
+        margin-bottom: 0;
+      }
+    }
   }
 }
