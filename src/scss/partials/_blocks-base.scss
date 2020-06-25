@@ -75,22 +75,27 @@ cite {
 --------------------------------------------- */
 
 p {
-	margin: 0 0 $base-margin;
+	margin: 0;
 	padding: 0;
 
-// 	&.large,
-// 	&.has-large-font-size {
-//     	@include font-sizes( 21px, 24px );
-// 	}
+	// Set margin-top for all p elements that come
+	// directly after another p element
+	& + p {
+		margin-top: $base-margin * 1.125;
+	}
+}
 
-// 	&.has-normal-font-size {
-// 		@include font-sizes( 18px, 20px );
-// 	}
-
-// 	&.small,
-// 	&.has-small-font-size {
-// 	    font-size: 14px;
-// 	}
+// Set margin-top for all p elements that come
+// directly after a heading element
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	& + p {
+		margin-top: $base-margin / 2;
+	}
 }
 
 /* Headings
@@ -103,6 +108,12 @@ h4,
 h5,
 h6 {
 	@include heading;
+
+	// Set margin-top for all heading elements that come
+	// directly after a p element
+	p + & {
+		margin-top: $base-margin * 1.5;
+	}
 
 	a {
 		color: $grey-10;
@@ -118,22 +129,26 @@ h6 {
 	}
 }
 
-h1, .h1 {
-	@include heading-4;
+h1,
+.h1 {
+	@include h4;
 
 	@include media(">=tablet") {
-		@include heading-2;
+		@include h2;
 	}
 
 	@include media(">=desktop") {
-		@include heading-1;
+		@include h1;
 	}
 }
 
-h3, .h3 {
-	@include heading-4;
+h3,
+.h3 {
+	@include h4;
 }
 
-h4, h5, h6 {
-	@include heading-6;
+h4,
+h5,
+h6 {
+	@include h6;
 }

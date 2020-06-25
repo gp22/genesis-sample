@@ -15,37 +15,37 @@
 	color: inherit;
 	font-family: $font-display;
 	font-weight: 700;
-	margin: 0 0 $base-margin;
+	margin: 0;
 }
 
-@mixin heading-1 {
+@mixin h1 {
 	font-size: $text-6xl;
-	line-height: $line-height-heading-6xl;
+	line-height: $line-height-h1;
 }
 
-@mixin heading-2 {
+@mixin h2 {
 	font-size: $text-5xl;
-	line-height: $line-height-heading-5xl;
+	line-height: $line-height-h2;
 }
 
-@mixin heading-3 {
+@mixin h3 {
 	font-size: $text-4xl;
-	line-height: $line-height-heading-4xl;
+	line-height: $line-height-h3;
 }
 
-@mixin heading-4 {
+@mixin h4 {
 	font-size: $text-3xl;
-	line-height: $line-height-heading-3xl;
+	line-height: $line-height-h4;
 }
 
-@mixin heading-5 {
+@mixin h5 {
 	font-size: $text-2xl;
-	line-height: $line-height-heading-2xl;
+	line-height: $line-height-h5;
 }
 
-@mixin heading-6 {
+@mixin h6 {
 	font-size: $text-xl;
-	line-height: $line-height-heading-xl;
+	line-height: $line-height-h6;
 }
 
 %transition {
