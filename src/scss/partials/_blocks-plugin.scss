@@ -8,10 +8,10 @@
 	& .wp-block-group__inner-container {
 		max-width: map-get( $breakpoints, 'desktop' );
 		margin: 0 auto;
-		padding: $size-9 $base-margin;
+		padding: 0 $base-margin;
 
 		@include media(">=tablet") {
-			padding: $size-11 $base-margin;
+			padding: 0 $base-margin;
 		}
 	}
 }
@@ -200,7 +200,7 @@ div.wpforms-container {
 			grid-template-columns: 1fr;
 			grid-template-areas: "col1" "col2";
 
-			@include media(">desktop") {
+			@include media(">=desktop") {
 				grid-template-columns: 1fr 1fr;
 				grid-template-areas: "col1 col2";
 			}
