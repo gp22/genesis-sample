@@ -33,11 +33,11 @@ function genesis_hero_section_output( ) {
 						<?php if ( $hero['hero-heading'] ) echo esc_html( $hero['hero-heading'] ); ?>
 
 					</h1>
-					<h2 class="hero-subhead">
+					<p class="hero-subhead">
 
 						<?php if ( $hero['hero-subhead'] ) echo esc_html( $hero['hero-subhead'] ); ?>
 
-					</h2>
+					</p>
 				</div>
 				<img
 					alt="Paul Garcia"
