@@ -63,9 +63,9 @@ pre code {
 	border: 0;
 }
 
-cite {
-	font-style: normal;
-}
+// cite {
+// 	font-style: normal;
+// }
 
 /* Paragraph
 --------------------------------------------- */
@@ -139,9 +139,22 @@ h1,
 	}
 }
 
+h2,
+.h2 {
+	@include h4;
+
+	@include media(">=tablet") {
+		@include h2;
+	}
+}
+
 h3,
 .h3 {
-	@include h4;
+	@include h5;
+
+	@include media(">=tablet") {
+		@include h4;
+	}
 }
 
 h4,
