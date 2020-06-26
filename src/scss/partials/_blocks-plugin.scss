@@ -4,16 +4,6 @@
 .wpforms {
 	background: brand-color( 'blue', 'lighten' );
 	color: $white;
-
-	& .wp-block-group__inner-container {
-		max-width: map-get( $breakpoints, 'desktop' );
-		margin: 0 auto;
-		padding: 0 $base-margin;
-
-		@include media(">=tablet") {
-			padding: 0 $base-margin;
-		}
-	}
 }
 
 .wpforms-title {
@@ -22,13 +12,12 @@
 
 .wpforms-description {
 	color: rgba( $white, .75 );
-	margin: 0 auto $size-7;
-	max-width: $content-width;
+	margin-bottom: $size-7;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 div.wpforms-container {
-
-	margin: 0;
 
 	.wpforms-field {
 		padding: 0;

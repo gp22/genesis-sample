@@ -67,15 +67,12 @@ cite {
 	font-style: normal;
 }
 
-// .clearfix {
-// 	@include clearfix;
-// }
-
 /* Paragraph
 --------------------------------------------- */
 
 p {
 	margin: 0;
+	max-width: $content-width;
 	padding: 0;
 
 	// Set margin-top for all p elements that come
