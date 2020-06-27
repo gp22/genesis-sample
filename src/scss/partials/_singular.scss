@@ -224,7 +224,7 @@
 
 		li {
 			list-style-type: none;
-			border: 1px solid $grey-3;
+			border: 1px solid $border-color;
 
 			article {
 				padding: $base-margin;
@@ -271,11 +271,11 @@
 
 		.comment-meta {
 			font-size: 14px;
-			color: $grey-6;
+			color: $gray-2;
 			vertical-align: middle;
 
 			a {
-				color: $grey-6;
+				color: $gray-2;
 				font-weight: 400;
 				text-decoration: none;
 

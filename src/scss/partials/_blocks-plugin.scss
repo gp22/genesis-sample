@@ -83,7 +83,7 @@ div.wpforms-container {
 	&.style-icon {
 
 		svg {
-			fill: $grey-5;
+			fill: $gray-3;
 			@include icon-position( 24px );
 		}
 
@@ -117,7 +117,6 @@ div.wpforms-container {
 		}
 
 		h3 {
-			color: $grey-8;
 			text-transform: uppercase;
 			font-weight: 600;
 			text-align: center;
@@ -125,7 +124,7 @@ div.wpforms-container {
 		}
 
 		.shared-counts-button {
-			background: $grey-6;
+			background: $gray-3;
 			border-radius: 3px;
 			color: $white;
 			display: block;
@@ -137,7 +136,7 @@ div.wpforms-container {
 			margin-bottom: 15px;
 
 			&:hover {
-				background: $grey-8;
+				background: $gray-4;
 			}
 
 			svg {

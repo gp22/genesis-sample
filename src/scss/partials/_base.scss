@@ -1,21 +1,17 @@
 // Colors
 $white: #fff;
-$grey-1: #FAFAFA;
-$grey-2: #F5F5F5;
-$grey-3: #EEEEEE;
-$grey-4: #E0E0E0;
-$grey-5: #BDBDBD;
-$grey-6: #9E9E9E;
-$grey-7: #757575;
-$grey-8: #616161;
-$grey-9: #424242;
-$grey-10: #212121;
+$gray-1: #f2f3f5;
+$gray-2: #bdc4cc;
+$gray-3: #7a8999;
+$gray-4: #3d444d;
+$gray-5: #0c0e0f;
 $black: #000;
 
 // Brand Colors
 $brand_colors: (
-	"blue"	: #05306F,
-	"grey"	: $grey-1,
+	"blue"				: #2c4275,
+	"light-blue"	: #279dfa,
+	"gray"				: $gray-4,
 );
 @import "../modules/brand-color";
 
@@ -23,9 +19,9 @@ $facebook: #3B5998;
 $twitter: #00B6F1;
 $pinterest: #CB2027;
 
-$base-color: $grey-9;
+$base-color: $gray-4;
 $highlight: brand-color( "blue" );
-$border-color: $grey-4;
+$border-color: $gray-3;
 
 // Fonts
 $font-sans:    "Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;

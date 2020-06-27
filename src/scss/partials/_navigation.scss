@@ -36,7 +36,7 @@
 		}
 
 		&:hover > a {
-			background: $grey-2;
+			background: $gray-1;
 		}
 
 		&.current-menu-item > a,
@@ -54,7 +54,7 @@
 		right: 7px;
 
 		svg {
-			fill: $grey-7;
+			fill: $gray-3;
 		}
 	}
 
@@ -146,7 +146,7 @@
 		// display: none;
 
 		&.active {
-			background: $grey-3;
+			background: $gray-1;
 			border-top: 1px solid $border-color;
 			display: block;
 			margin: 0 -48px;
@@ -202,7 +202,7 @@
 
 	&:hover,
 	&.active {
-		background: $grey-3;
+		background: $gray-1;
 	}
 
 	&.active {
@@ -253,7 +253,7 @@
 --------------------------------------------- */
 
 .header-search {
-	background: $grey-3;
+	background: $gray-1;
 	overflow: hidden;
 	padding: 16px;
 	width: 100%;
