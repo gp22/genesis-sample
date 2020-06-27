@@ -180,6 +180,13 @@ div.wpforms-container {
 /* Atomic Blocks
 --------------------------------------------- */
 
+.ab-block-layout-column-inner {
+
+  & p {
+    margin-top: $base-margin * 1.75;
+  }
+}
+
 .wp-block-group.block-features {
 
 	.ab-layout-columns-2 {

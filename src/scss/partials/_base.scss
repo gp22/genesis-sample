@@ -21,7 +21,7 @@ $pinterest: #CB2027;
 
 $base-color: $gray-4;
 $highlight: brand-color( "blue" );
-$border-color: $gray-3;
+$border-color: $gray-2;
 
 // Fonts
 $font-sans:    "Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
@@ -76,6 +76,10 @@ $size-14: 10rem;
 $size-15: 12rem;
 $size-16: 14rem;
 $size-17: 16rem;
+
+// Tracking;
+
+$tracking-wider: 0.05em;
 
 // Grid
 $grid: grid;
