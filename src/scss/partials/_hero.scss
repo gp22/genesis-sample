@@ -5,7 +5,6 @@
   position: relative;
 
   & .hero-inner {
-    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -26,6 +25,7 @@
     }
 
     & .hero-img {
+      align-self: center;
       border-radius: $rounded-full;
       box-shadow: $shadow-lg;
       height: 120px;
