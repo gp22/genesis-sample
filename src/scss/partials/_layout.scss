@@ -36,15 +36,10 @@ input[type="search"] {
 .wrap {
 	max-width: map-get( $breakpoints, 'desktop' );
 	margin: 0 auto;
-	padding: 0 $base-margin;
+	padding: 0 $wrap-edge;
 }
 
 .site-inner {
-	// padding: 36px 0;
-	// @include media(">=tablet") {
-		// padding: 48px 0;
-	// }
-
 	.singular.content & > .wrap {
 		max-width: map-get( $breakpoints, 'content-width' );
 	}
