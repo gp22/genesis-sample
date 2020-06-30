@@ -33,7 +33,7 @@
 		height: $logo-height;
 	}
 
-	@include media(">=tablet") {
+	@include media(">=mobile-menu") {
 		width: $logo-width;
 	}
 }
@@ -58,7 +58,7 @@
 --------------------------------------------- */
 
 @if( $persistent-desktop ) {
-	@include media(">mobile_menu") {
+	@include media(">mobile-menu") {
 
 		.site-container {
 			padding-top: $persistent-desktop;
@@ -89,7 +89,7 @@
 }
 
 @if( $persistent-mobile ) {
-	@include media("<=mobile_menu") {
+	@include media("<=mobile-menu") {
 
 		.site-container {
 			padding-top: $persistent-mobile;

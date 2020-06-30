@@ -8,7 +8,7 @@
 		padding: 0;
 	}
 
-	@include media(">mobile_menu") {
+	@include media(">=mobile-menu") {
 		display: block;
 		width: auto;
 	}
@@ -60,10 +60,10 @@
 
 	// .nav-secondary {
 	// 	.menu-item.search {
-	// 		@include media("<=mobile_menu") {
+	// 		@include media("<=mobile-menu") {
 	// 			padding: 4px 16px 16px;
 	// 		}
-	// 		@include media(">mobile_menu") {
+	// 		@include media(">mobile-menu") {
 	// 			margin: 5px 0 0 8px;
 
 	// 			.search-field {
@@ -84,13 +84,13 @@
 	// 			padding: 12px;
 	// 		}
 
-	// 		@include media("<=mobile_menu") {
+	// 		@include media("<=mobile-menu") {
 	// 			display: none;
 	// 		}
 	// 	}
 	// }
 
-	// @include media(">mobile_menu") {
+	// @include media(">mobile-menu") {
 		// float: right;
 		// width: calc( 100% - #{$menu-width} );
 		// display: flex;
@@ -142,7 +142,7 @@
 		// }
 	// }
 
-	@include media("<=mobile_menu") {
+	@include media("<mobile-menu") {
 		// display: none;
 
 		&.active {
@@ -234,7 +234,7 @@
 			// height: 48px;
 			padding: $size-5 0;
 
-			@include media(">mobile_menu") {
+			@include media(">=mobile-menu") {
 				display: none;
 			}
 		}
@@ -268,7 +268,7 @@
 		}
 	}
 
-	@include media("<=mobile_menu") {
+	@include media("<=mobile-menu") {
 		margin: 0 -48px;
 		width: calc( 100% + 96px );
 	}

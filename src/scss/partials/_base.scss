@@ -108,9 +108,9 @@ $rounded-full: 9999px;
 // Include Media
 $breakpoints: (
 	"phone"         : 360px,
+	"mobile-menu"   : 600px,
 	"small"         : 700px,
 	"tablet"        : 700px, // required for include-media
-	"mobile_menu"   : 700px,
 	"medium"        : 700px,
 	"desktop"       : $grid-width + $grid-gap, // required for include-media
 	"content-width" : calc( $content-width + $grid-gap ),
