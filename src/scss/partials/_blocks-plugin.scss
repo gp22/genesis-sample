@@ -7,11 +7,11 @@ div.wp-block-group {
 		background: brand-color( 'blue', 'lighten' );
 		color: $white;
 
-	& .wp-block-group__inner-container {
-		max-width: map-get( $breakpoints, 'desktop' );
-		margin: 0 auto;
-		padding: 0 $wrap-edge;
-	}
+		.wp-block-group__inner-container {
+			max-width: map-get( $breakpoints, 'desktop' );
+			margin: 0 auto;
+			padding: 0 $wrap-edge;
+		}
 
 		.wpforms-title {
 			color: $white;
@@ -35,14 +35,6 @@ div.wp-block-group {
 				color: $white;
 			}
 
-			// .wpforms-recaptcha-container {
-			// 	padding: 0;
-
-			// 	@include media(">=tablet") {
-			// 		margin-bottom: -78px;
-			// 	}
-			// }
-
 			.wpforms-field-container {
 				display: flex;
 				flex-wrap: wrap;
@@ -58,14 +50,15 @@ div.wp-block-group {
 
 			.wpforms-submit-container {
 				text-align: left;
-				margin: 0;
+
+				.wpforms-submit {
+					@include button-reset;
+					background-color: brand-color( 'light-blue' );
+					color: $white;
+				}
 			}
 
-			.wpforms-submit {
-				padding: $size-3 $size-6;
-			}
-
-			& textarea.wpforms-field-medium {
+			textarea.wpforms-field-medium {
 				height: $size-14;
 			}
 
@@ -83,6 +76,7 @@ div.wp-block-group {
 		}
 	}
 }
+
 /* Shared Counts
 --------------------------------------------- */
 

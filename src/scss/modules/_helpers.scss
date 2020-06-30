@@ -5,9 +5,9 @@
 @mixin button-reset() {
 	background: transparent;
 	border: none;
-	border-radius: 0;
+	border-radius: $rounded-sm;
 	box-shadow: none;
-	padding: 0;
+	padding: $size-3 $size-6;
 	outline: none;
 	cursor: pointer;
 }
