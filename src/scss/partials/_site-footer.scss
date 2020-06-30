@@ -75,32 +75,31 @@
 
 .site-footer {
 	background: $gray-5;
-	color: rgba( $white, .75 );
-	font-size: 14px;
-	padding: 32px 0;
+	color: rgba( $white, .5 );
+	font-size: $text-xs;
+	padding: $size-8 0;
 	text-align: center;
 
 	.wrap > *:last-child {
 		margin-bottom: 0;
 	}
 
-	a {
+	// a {
 		// color: rgba( $white, .75 );
 
-		&:hover {
-			color: rgba( $white, 1 );
-		}
-	}
+	// 	&:hover {
+	// 		color: rgba( $white, 1 );
+	// 	}
+	// }
 
 	.contact-container {
 
 		.contact a + a {
-			margin-left: 12px;
+			margin-left: $size-3;
 		}
 
 		p {
-			margin-left: auto;
-			margin-right: auto;
+			margin: $size-4 auto 0;
 		}
 	}
 
