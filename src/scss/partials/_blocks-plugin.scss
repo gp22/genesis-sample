@@ -188,14 +188,25 @@ div.wp-block-group {
 /* Atomic Blocks
 --------------------------------------------- */
 
-.ab-block-layout-column-inner {
-
-  & p {
-    margin-top: $base-margin * 1.75;
-  }
-}
-
 .wp-block-group.block-features {
+
+	.ab-block-layout-column-inner {
+
+		.svg-inline--fa {
+			color: darken( brand-color( "light-blue" ), 10% );
+			height: $size-10;
+			margin-top: $base-margin * 2.5;
+			width: $size-10;
+		}
+
+		& h3 {
+			margin-top: $base-margin / 2;
+		}
+
+		& p {
+			margin-top: $base-margin * 1.75;
+		}
+	}
 
 	.ab-layout-columns-2 {
 
