@@ -232,7 +232,7 @@
 			// top: 0;
 			// width: 48px;
 			// height: 48px;
-			padding: $size-5 0;
+			padding: $size-5 $size-6;
 
 			@include media(">=mobile-menu") {
 				display: none;
