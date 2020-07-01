@@ -10,9 +10,12 @@
 
 /**
  * Genesis responsive menus settings. (Requires Genesis 3.0+.)
+ * Removed 'Menu' text from nav according to this article:
+ * https://designody.com/remove-menu-text-from-genesis-sample/
  */
 return [
 	'script' => [
+		'mainMenu' => __( '', 'genesis-sample' ),
 		'menuClasses' => [
 			'others' => [ '.nav-primary' ],
 		],
