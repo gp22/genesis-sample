@@ -177,10 +177,6 @@ img {
 
 .wp-block-group {
 
-	.wp-block-group__inner-container {
-		margin: 0 auto;
-	}
-
 	// Dark background
 	&.has-background:not(.has-grey-background-color) {
 		color: $white;

@@ -10,9 +10,7 @@ div.wp-block-group {
 		padding: $size-10 0;
 
 		.wp-block-group__inner-container {
-			max-width: map-get( $breakpoints, 'desktop' );
-			margin: 0 auto;
-			padding: 0 $wrap-edge;
+			@include wrap;
 		}
 
 		.wpforms-title {

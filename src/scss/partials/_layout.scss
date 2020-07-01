@@ -34,9 +34,7 @@ input[type="search"] {
 --------------------------------------------- */
 
 .wrap {
-	max-width: map-get( $breakpoints, 'desktop' );
-	margin: 0 auto;
-	padding: 0 $wrap-edge;
+	@include wrap;
 }
 
 .site-inner {

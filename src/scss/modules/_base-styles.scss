@@ -6,6 +6,12 @@
 	line-height: $line-height-body;
 }
 
+@mixin wrap {
+	max-width: map-get( $breakpoints, 'desktop' );
+	margin: 0 auto;
+	padding: 0 $wrap-edge;
+}
+
 /**
  * Heading Mixins inspired by the article at:
  * https://responsivedesign.is/articles/helpful-sass-mixins/
