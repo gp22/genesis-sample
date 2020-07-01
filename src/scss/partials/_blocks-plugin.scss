@@ -6,6 +6,8 @@ div.wp-block-group {
 	&.wpforms {
 		background: brand-color( 'blue', 'lighten' );
 		color: $white;
+		margin-top: $size-12;
+		padding: $size-10 0;
 
 		.wp-block-group__inner-container {
 			max-width: map-get( $breakpoints, 'desktop' );
@@ -183,6 +185,7 @@ div.wp-block-group {
 --------------------------------------------- */
 
 .wp-block-group.block-features {
+	margin-top: $size-12;
 
 	.ab-block-layout-column-inner {
 

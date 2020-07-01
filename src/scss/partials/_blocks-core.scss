@@ -58,7 +58,7 @@ blockquote.wp-block-quote {
 
 	&.has-text-align-center.is-style-large {
 		margin-bottom: 0;
-		margin-top: $size-10;
+		margin-top: $size-12;
 		padding: $size-10 $wrap-edge;
 
 		background-color: $gray-1;
@@ -177,11 +177,6 @@ img {
 
 .wp-block-group {
 
-	&:not(.main-content) {
-		padding-bottom: $size-10;
-		padding-top: $size-10;
-	}
-
 	.wp-block-group__inner-container {
 		margin: 0 auto;
 	}
@@ -200,6 +195,7 @@ img {
 --------------------------------------------- */
 
 .wp-block-media-text.is-stacked-on-mobile {
+	margin-top: $size-12;
 
 	.wp-block-media-text__content {
 		margin-bottom: $base-margin * 1.5;
