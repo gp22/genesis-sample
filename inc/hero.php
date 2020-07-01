@@ -41,7 +41,7 @@ function genesis_hero_section_output( ) {
 				</div>
 				<img
 					alt="Paul Garcia"
-					src="<?php echo get_stylesheet_directory_uri(); ?>/public/img/paul_garcia.png"
+					src="<?php echo get_stylesheet_directory_uri(); ?>/public/img/paul_garcia.jpg"
 					class="hero-img"
 				/>
 			</div>
