@@ -1,25 +1,26 @@
 <?php
 /**
- * Genesis Sample.
+ * Paul Garcia Co.
  *
- * This file adds functions to the Genesis Sample Theme.
+ * This file adds functions to the Paul Garcia Co Theme.
+ * Based on the Genesis Sample Theme.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Paul Garcia Co
+ * @author  Paul Garcia
  * @license GPL-2.0-or-later
- * @link    https://www.studiopress.com/
+ * @link    https://github.com/gp22/genesis-sample
  */
 
 // Starts the engine.
 require_once get_template_directory() . '/lib/init.php';
 
-add_action( 'wp_enqueue_scripts', 'global_enqueues' );
+add_action( 'wp_enqueue_scripts', 'pg_global_enqueues' );
 /**
  * Global enqueues
  *
  * @since 1.0.0
  */
-function global_enqueues() {
+function pg_global_enqueues() {
 
 	// Google Fonts
 	wp_enqueue_style( 'open-sans-condensed', '//fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap', array(), filemtime( get_stylesheet_directory() . '/public/css/style.css' ) );
