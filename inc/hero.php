@@ -38,6 +38,7 @@ function genesis_hero_section_output( ) {
 						<?php if ( $hero['hero-subhead'] ) echo esc_html( $hero['hero-subhead'] ); ?>
 
 					</p>
+					<a class="hero-button" href="/contact">Get in Touch!</a>
 				</div>
 				<img
 					alt="Paul Garcia"

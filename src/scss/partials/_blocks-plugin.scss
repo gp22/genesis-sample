@@ -10,7 +10,7 @@
 div.wp-block-group.wpforms {
 	background: brand-color( 'blue', 'lighten' );
 	color: $white;
-	padding: $size-10 0;
+	padding: $size-11 0;
 
 	.wp-block-group__inner-container {
 		@include wrap;
@@ -28,6 +28,7 @@ div.wp-block-group.wpforms {
 	}
 
 	div.wpforms-container {
+		margin-bottom: 0;
 
 		.wpforms-field {
 			padding: 0;
@@ -52,12 +53,11 @@ div.wp-block-group.wpforms {
 		}
 
 		.wpforms-submit-container {
-			text-align: left;
+			text-align: center;
 
 			.wpforms-submit {
 				@include button-reset;
-				background-color: brand-color( 'light-blue' );
-				color: $white;
+				@include button-primary;
 			}
 		}
 

@@ -5,11 +5,19 @@
 @mixin button-reset() {
 	background: transparent;
 	border: none;
-	border-radius: $rounded-sm;
 	box-shadow: none;
-	padding: $size-3 $size-6;
-	outline: none;
 	cursor: pointer;
+	outline: none;
+}
+
+@mixin button-primary() {
+	background-color: brand-color( 'light-blue' );
+	border-radius: $rounded-sm;
+	color: $white;
+	font-weight: 700;
+	letter-spacing: $tracking-wider;
+	padding: $size-3 $size-6;
+	text-transform: uppercase;
 }
 
 /**

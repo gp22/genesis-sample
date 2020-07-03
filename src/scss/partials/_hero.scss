@@ -3,53 +3,68 @@
   color: $white;
   position: relative;
 
-  & .hero-inner {
+  .hero-inner {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: $size-12;
     padding-top: $size-10;
+    text-align: center;
 
-    & .hero-heading-container {
+    .hero-button {
+      @include button-reset;
+      @include button-primary;
+
+      display: inline-block;
+      margin-top: $size-7;
+      text-decoration: none;
+    }
+
+    .hero-heading-container {
+      @include mx-auto;
+
       max-width: $content-width;
     }
 
-    & .hero-subhead {
+    .hero-subhead {
       color: rgba( $white, .75 );
       font-family: $font-sans;
       font-size: inherit;
       font-weight: 400;
       line-height: $line-height-body;
-      margin-bottom: $size-8;
+      margin-top: $size-5;
     }
 
-    & .hero-img {
+    .hero-img {
       align-self: center;
       border-radius: $rounded-full;
       box-shadow: $shadow-lg;
       height: 120px;
+      margin-top: $size-10;
       width: 120px;
     }
   }
 
-  & svg {
+  svg {
     position: absolute;
     bottom: 0;
   }
 
   @include media(">=tablet") {
 
-    & .hero-inner {
+    .hero-inner {
       flex-direction: row;
       padding-bottom: $size-13;
       padding-top: $size-12;
+      text-align: left;
 
-      & .hero-heading-container {
+      .hero-heading-container {
+        margin-left: 0;
         margin-right: $size-8;
       }
 
-      & .hero-subhead {
-        margin-bottom: 0;
+      .hero-img {
+        margin-top: 0;
       }
     }
   }

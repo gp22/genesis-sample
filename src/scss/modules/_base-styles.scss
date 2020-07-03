@@ -12,6 +12,11 @@
 	padding: 0 $wrap-edge;
 }
 
+@mixin mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /**
  * Heading Mixins inspired by the article at:
  * https://responsivedesign.is/articles/helpful-sass-mixins/
