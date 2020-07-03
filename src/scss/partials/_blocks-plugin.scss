@@ -1,77 +1,79 @@
 /* WPForms
 --------------------------------------------- */
 
-div.wp-block-group {
-
-	&.wpforms {
-		background: brand-color( 'blue', 'lighten' );
-		color: $white;
+.home {
+	div.wp-block-group.wpforms {
 		margin-top: $size-12;
-		padding: $size-10 0;
+	}
+}
 
-		.wp-block-group__inner-container {
-			@include wrap;
+div.wp-block-group.wpforms {
+	background: brand-color( 'blue', 'lighten' );
+	color: $white;
+	padding: $size-10 0;
+
+	.wp-block-group__inner-container {
+		@include wrap;
+	}
+
+	.wpforms-title {
+		color: $white;
+	}
+
+	.wpforms-description {
+		color: rgba( $white, .75 );
+		margin-bottom: $size-7;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	div.wpforms-container {
+
+		.wpforms-field {
+			padding: 0;
+			margin-bottom: 32px;
 		}
 
-		.wpforms-title {
+		.wpforms-field-label {
 			color: $white;
 		}
 
-		.wpforms-description {
-			color: rgba( $white, .75 );
-			margin-bottom: $size-7;
-			margin-left: auto;
-			margin-right: auto;
+		.wpforms-field-container {
+			display: flex;
+			flex-wrap: wrap;
 		}
 
-		div.wpforms-container {
+		.wpforms-field {
+			width: 100%;
+		}
 
-			.wpforms-field {
-				padding: 0;
-				margin-bottom: 32px;
-			}
+		.wpforms-field-medium {
+			max-width: none;
+		}
 
-			.wpforms-field-label {
+		.wpforms-submit-container {
+			text-align: left;
+
+			.wpforms-submit {
+				@include button-reset;
+				background-color: brand-color( 'light-blue' );
 				color: $white;
 			}
+		}
 
-			.wpforms-field-container {
-				display: flex;
-				flex-wrap: wrap;
+		textarea.wpforms-field-medium {
+			height: $size-14;
+		}
+
+		@include media(">=tablet") {
+			.wpforms-field-name {
+				padding-right: $size-2;
+				width: 50%;
 			}
 
-			.wpforms-field {
-				width: 100%;
-			}
-
-			.wpforms-field-medium {
-				max-width: none;
-			}
-
-			.wpforms-submit-container {
-				text-align: left;
-
-				.wpforms-submit {
-					@include button-reset;
-					background-color: brand-color( 'light-blue' );
-					color: $white;
-				}
-			}
-
-			textarea.wpforms-field-medium {
-				height: $size-14;
-			}
-
-			@include media(">=tablet") {
-				.wpforms-field-name {
-					padding-right: $size-2;
-					width: 50%;
-				}
-
-				.wpforms-field-email {
-					padding-left: $size-2;
-					width: 50%;
-				}
+			.wpforms-field-email {
+				padding-left: $size-2;
+				width: 50%;
 			}
 		}
 	}

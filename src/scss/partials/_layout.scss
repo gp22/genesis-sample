@@ -43,6 +43,17 @@ input[type="search"] {
 	}
 }
 
+/* Site Container
+--------------------------------------------- */
+
+.page-id-437 .site-container {
+	background: brand-color( 'blue', 'lighten' );
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100vh;
+}
+
 /* Screen Reader Text
 --------------------------------------------- */
 
