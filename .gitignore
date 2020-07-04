@@ -3,6 +3,7 @@
 /phpcs.xml
 node_modules/
 package/
+public/
 
 # Artifacts
 process.yml
