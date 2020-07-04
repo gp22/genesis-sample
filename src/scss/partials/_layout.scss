@@ -46,12 +46,25 @@ input[type="search"] {
 /* Site Container
 --------------------------------------------- */
 
-.page-id-437 .site-container {
-	background: brand-color( 'blue', 'lighten' );
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	min-height: 100vh;
+body.page-id-437 {
+
+	.site-container {
+		background: brand-color( 'blue', 'lighten' );
+	}
+}
+
+body:not(.home) {
+
+	.site-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-height: 100vh;
+
+		.site-inner {
+			padding: $size-11 0;
+		}
+	}
 }
 
 /* Screen Reader Text
@@ -108,7 +121,6 @@ input[type="search"] {
 		}
 
 		.sidebar-primary {
-			// float: right;
 			width: 335px / 1168px * 100%;
 		}
 
@@ -120,13 +132,11 @@ input[type="search"] {
 			}
 
 			.site-main {
-				// float: none;
 				width: 100%;
 				max-width: $content-width;
 			}
 
 			.sidebar-primary {
-				// float: none;
 				width: 100%;
 			}
 		}

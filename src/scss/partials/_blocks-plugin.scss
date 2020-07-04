@@ -4,13 +4,13 @@
 .home {
 	div.wp-block-group.wpforms {
 		margin-top: $size-12;
+		padding: $size-11 0;
 	}
 }
 
 div.wp-block-group.wpforms {
 	background: brand-color( 'blue', 'lighten' );
 	color: $white;
-	padding: $size-11 0;
 
 	.wp-block-group__inner-container {
 		@include wrap;
