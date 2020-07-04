@@ -25,7 +25,8 @@
 @mixin heading {
 	color: inherit;
 	font-family: $font-display;
-	font-weight: 700;
+	font-weight: 500;
+	letter-spacing: $tracking-tighter;
 	margin: 0;
 }
 
