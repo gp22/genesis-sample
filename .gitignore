@@ -2,6 +2,7 @@
 /composer.lock
 /phpcs.xml
 node_modules/
+package/
 
 # Artifacts
 process.yml
