@@ -45,6 +45,8 @@ let paths = {
 			"!gulpfile.babel.js",
 			"!package.json",
 			"!package-lock.json",
+			"!phpcs.xml.dist",
+			"!composer.json",
 		],
 		dest: "package",
 	},
