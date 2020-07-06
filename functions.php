@@ -57,6 +57,9 @@ function pg_child_theme_setup() {
 	genesis_unregister_layout( 'content-sidebar' );
 	genesis_unregister_layout( 'sidebar-content' );
 
+	// Force full-width-content layout setting
+	add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
+
 	/* Gutenberg
 	----------------------------------------------------------------------------*/
 
