@@ -28,7 +28,7 @@ function pg_global_enqueues() {
 
 }
 
-add_action( 'wp_enqueue_scripts', 'pg_child_theme_setup' );
+add_action( 'after_setup_theme', 'pg_child_theme_setup' );
 /**
  * Theme setup.
  *
@@ -50,87 +50,80 @@ function pg_child_theme_setup() {
 	include_once( get_stylesheet_directory() . '/inc/site-footer.php' );
 	include_once( get_stylesheet_directory() . '/inc/hero.php' );
 
+	// Removes site layouts.
+	genesis_unregister_layout( 'content-sidebar-sidebar' );
+	genesis_unregister_layout( 'sidebar-content-sidebar' );
+	genesis_unregister_layout( 'sidebar-sidebar-content' );
+	genesis_unregister_layout( 'content-sidebar' );
+	genesis_unregister_layout( 'sidebar-content' );
+
+	/* Gutenberg
+	----------------------------------------------------------------------------*/
+
+	// Add support for editor styles
+	add_theme_support( 'editor-styles' );
+	// add_editor_style( get_stylesheet_directory_uri() . '/public/css/editor.css' );
+
+	// Adds support for block alignments
+	add_theme_support( 'align-wide' );
+
+	// Make media embeds responsive.
+	add_theme_support( 'responsive-embeds' );
+
+	// Disable custom font sizes
+	add_theme_support( 'disable-custom-font-sizes' );
+
+	// -- Editor Font Styles
+	add_theme_support( 'editor-font-sizes', [
+		[
+			'name' => __( 'Small', 'genesis-sample' ),
+			'size' => 12,
+			'slug' => 'small',
+		],
+		[
+			'name' => __( 'Normal', 'genesis-sample' ),
+			'size' => 18,
+			'slug' => 'normal',
+		],
+		[
+			'name' => __( 'Large', 'genesis-sample' ),
+			'size' => 20,
+			'slug' => 'large',
+		],
+		[
+			'name' => __( 'Larger', 'genesis-sample' ),
+			'size' => 24,
+			'slug' => 'larger',
+		],
+	]);
+
+	// Disable Custom Colors
+	add_theme_support( 'disable-custom-colors' );
+
+	// Editor Color Palette
+	add_theme_support( 'editor-color-palette', [
+		[
+			'name'  => __( 'Custom color', 'genesis-sample' ), // Called “Link Color” in the Customizer options. Renamed because “Link Color” implies it can only be used for links.
+			'slug'  => 'theme-primary',
+			'color' => '#0073e5',
+		],
+		[
+			'name'  => __( 'Accent color', 'genesis-sample' ),
+			'slug'  => 'theme-secondary',
+			'color' => '#0073e5',
+		],
+	]);
 }
 
 /* Everything below this line was included in the default Genesis sample theme
 ----------------------------------------------------------------------------- */
 
-// Sets up the Theme.
-require_once get_stylesheet_directory() . '/lib/theme-defaults.php';
-
-add_action( 'after_setup_theme', 'genesis_sample_localization_setup' );
-/**
- * Sets localization (do not remove).
- *
- * @since 1.0.0
- */
-function genesis_sample_localization_setup() {
-
-	load_child_theme_textdomain( genesis_get_theme_handle(), get_stylesheet_directory() . '/languages' );
-
-}
-
 // Adds helper functions.
 require_once get_stylesheet_directory() . '/lib/helper-functions.php';
-
-// Adds image upload and color select to Customizer.
-require_once get_stylesheet_directory() . '/lib/customize.php';
-
-// Includes Customizer CSS.
-require_once get_stylesheet_directory() . '/lib/output.php';
-
-// Adds WooCommerce support.
-require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-setup.php';
-
-// Adds the required WooCommerce styles and Customizer CSS.
-require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-output.php';
-
-// Adds the Genesis Connect WooCommerce notice.
-require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-notice.php';
-
-add_action( 'after_setup_theme', 'genesis_child_gutenberg_support' );
-/**
- * Adds Gutenberg opt-in features and styling.
- *
- * @since 2.7.0
- */
-function genesis_child_gutenberg_support() { // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound -- using same in all child themes to allow action to be unhooked.
-	require_once get_stylesheet_directory() . '/lib/gutenberg/init.php';
-}
 
 // Registers the responsive menus.
 if ( function_exists( 'genesis_register_responsive_menus' ) ) {
 	genesis_register_responsive_menus( genesis_get_config( 'responsive-menus' ) );
-}
-
-add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
-/**
- * Enqueues scripts and styles.
- *
- * @since 1.0.0
- */
-function genesis_sample_enqueue_scripts_styles() {
-
-	// $appearance = genesis_get_config( 'appearance' );
-
-	// wp_enqueue_style(
-	// 	genesis_get_theme_handle() . '-fonts',
-	// 	$appearance['fonts-url'],
-	// 	[],
-	// 	genesis_get_theme_version()
-	// );
-
-	wp_enqueue_style( 'dashicons' );
-
-	if ( genesis_is_amp() ) {
-		wp_enqueue_style(
-			genesis_get_theme_handle() . '-amp',
-			get_stylesheet_directory_uri() . '/lib/amp/amp.css',
-			[ genesis_get_theme_handle() ],
-			genesis_get_theme_version()
-		);
-	}
-
 }
 
 add_action( 'after_setup_theme', 'genesis_sample_theme_support', 9 );
@@ -178,11 +171,6 @@ unregister_sidebar( 'header-right' );
 
 // Removes secondary sidebar.
 unregister_sidebar( 'sidebar-alt' );
-
-// Removes site layouts.
-genesis_unregister_layout( 'content-sidebar-sidebar' );
-genesis_unregister_layout( 'sidebar-content-sidebar' );
-genesis_unregister_layout( 'sidebar-sidebar-content' );
 
 // Removes site description
 remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
