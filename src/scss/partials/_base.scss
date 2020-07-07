@@ -81,7 +81,7 @@ $breakpoints: (
 	"tablet"        : 700px, // required for include-media
 	"medium"        : 700px,
 	"desktop"       : $grid-width + $grid-gap, // required for include-media
-	"content-width" : calc( $content-width + $grid-gap ),
+	"content-width" : calc( #{$content-width} + #{$grid-gap} ),
 );
 
 @import "../modules/helpers";
