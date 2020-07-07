@@ -72,7 +72,7 @@ export let styles = () => {
 		.pipe(gulpif(!PROD, sourcemaps.init()))
 		.pipe(sass().on("error", sass.logError))
 		.pipe(gulpif(PROD, postcss([autoprefixer()])))
-		.pipe(gulpif(PROD, cleanCss({ compatibility: "ie8" })))
+		.pipe(gulpif(PROD, cleanCss({ compatibility: "*" }))) // default ie10 compatibility: https://www.npmjs.com/package/clean-css#compatibility-modes
 		.pipe(gulpif(!PROD, sourcemaps.write()))
 		.pipe(gulp.dest(paths.styles.dest))
 		.pipe(server.stream());
