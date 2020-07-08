@@ -225,27 +225,24 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 
+		& > .menu-toggle {
+			&:before {
+				background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='bars' class='svg-inline--fa fa-bars fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='currentColor' d='M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z'%3E%3C/path%3E%3C/svg%3E");
+				content: "";
+				display: inline-block;
+				width: $size-5;
+				height: $size-5;
+			}
+		}
+
 		& > .menu-toggle,
 		& > .search-toggle {
-			// display: none;
-			// position: absolute;
-			// top: 0;
-			// width: 48px;
-			// height: 48px;
 			padding: $size-5 $size-6;
 
 			@include media(">=mobile-menu") {
 				display: none;
 			}
 		}
-
-		// & > .menu-toggle {
-		// 	left: 0;
-		// }
-
-		// & > .search-toggle {
-		// 	right: 0;
-		// }
 	}
 }
 
