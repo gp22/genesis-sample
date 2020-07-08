@@ -5,16 +5,16 @@
 	div.wp-block-group.wpforms {
 		margin-top: $size-12;
 		padding: $size-11 0;
+
+		.wp-block-group__inner-container {
+			@include wrap;
+		}
 	}
 }
 
 div.wp-block-group.wpforms {
 	background: brand-color( 'blue', 'lighten' );
 	color: $white;
-
-	.wp-block-group__inner-container {
-		@include wrap;
-	}
 
 	.wpforms-title {
 		color: $white;

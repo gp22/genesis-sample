@@ -30,6 +30,26 @@ input[type="search"] {
 
 }
 
+// Add brand colored background on contact (page-id-437) page
+body.page-id-437 {
+
+	.site-container {
+		background: brand-color( 'blue', 'lighten' );
+	}
+}
+
+// Make sure the content fills the screen vertically
+body:not(.home) {
+
+	.site-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-height: 100vh;
+	}
+
+}
+
 /* Wrap
 --------------------------------------------- */
 
@@ -43,28 +63,20 @@ input[type="search"] {
 	}
 }
 
-/* Site Container
+/* Site Inner
 --------------------------------------------- */
-
-body.page-id-437 {
-
-	.site-container {
-		background: brand-color( 'blue', 'lighten' );
-	}
-}
 
 body:not(.home) {
 
 	.site-container {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		min-height: 100vh;
 
 		.site-inner {
-			padding: $size-11 0;
+			@include wrap;
+			padding-bottom: $size-11;
+			padding-top: $size-11;
 		}
 	}
+
 }
 
 /* Screen Reader Text
