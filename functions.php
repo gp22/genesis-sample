@@ -22,6 +22,13 @@ add_action( 'wp_enqueue_scripts', 'pg_global_enqueues' );
  */
 function pg_global_enqueues() {
 
+	// Move jQuery to footer
+	if( !is_admin() ) {
+		wp_deregister_script( 'jquery' );
+		wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
+		wp_enqueue_script( 'jquery' );
+	}
+
 	// CSS
 	wp_dequeue_style( 'child-theme' );
 	wp_enqueue_style( 'pg-style', get_stylesheet_directory_uri() . '/public/css/style.css', array(), filemtime( get_stylesheet_directory() . '/public/css/style.css' ) );
